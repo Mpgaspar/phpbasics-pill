@@ -11,6 +11,6 @@ echo "The minute is " . date("i");
 <br>
 
 <?php
-$fecha = DateTime::createFromFormat('j-M-Y', '28-Nov-2019');
+$fecha = DateTime::createFromFormat('d/m/Y', date("d/m/Y"));
 echo $fecha->format('Y-m-d');
 ?>
