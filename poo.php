@@ -48,9 +48,9 @@ echo $apple->get_name();
 ?>
 <br>
 
-<!-- __destruct -->
+<!-- Classes with __construct and __destruct -->
 <?php
-class Fruit1 {
+class Fruits1 {
   // Properties
   var $name;
   var $color;
@@ -64,6 +64,62 @@ class Fruit1 {
     echo "The fruit is {$this->name} and the color is {$this->color}."; 
   }
 }
+$apple = new Fruits1("Apple", "red");
+?>
+<br>
 
-$apple = new Fruit1("Apple", "red");
+<?php
+class Dogs {
+  // Properties
+  var $breed;
+  var $size;
+
+  // Methods
+  function __construct($breed, $size) {
+    $this->breed = $breed;
+    $this->size = $size; 
+  }
+  function __destruct() {
+    echo "The dog is a {$this->breed} and is {$this->size}.".'<br>'; 
+  }
+}
+$bulldog = new Dogs("Bulldog", "big");
+?>
+<br>
+
+<?php
+class Employees {
+  // Properties
+  var $name;
+  var $salary;
+
+  // Methods
+  function __construct($name, $salary) {
+    $this->name = $name;
+    $this->salary = $salary; 
+  }
+  function __destruct() {
+    echo "The employee {$this->name} have a salary of {$this->salary}.".'<br>'; 
+  }
+}
+$Axel = new Employees("Axel", "$5000");
+?>
+<br>
+
+<?php
+class Movies {
+  // Properties
+  var $name;
+  var $date;
+
+  // Methods
+  function __construct($name, $date) {
+    $this->name = $name;
+    $this->date = $date; 
+  }
+  function __destruct() {
+    echo "The movie {$this->name} was released in {$this->date}.".'<br>'; 
+  }
+}
+$jurassicPark = new Movies("Jurasic Park", "1993");
 ?>
